@@ -1,0 +1,272 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  line-height: 1.5;
+}
+
+li {
+  list-style: none;
+}
+
+.button {
+  display: inline-block;
+  background-color: rgb(202, 12, 12);
+  width: 300px;
+  height: 30px;
+  margin: 30px auto;
+  padding: 5px 0;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+.button:hover {
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  z-index: 10;
+}
+
+.header__logo {
+  height: 30%;
+  margin-left: 40px;
+}
+
+.header__logo img {
+  height: 100%;
+}
+
+.header__nav-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__nav-item {
+  padding-right: 30px;
+  font-weight: bold;
+}
+
+.drawer-menu,
+.drawer-menu__line {
+  display: none;
+}
+
+.firstview {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.firstview__img {
+  background-image: url(../img/mv.png);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.firstview__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: white;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.firstview__text h2 {
+  font-size: 30px;
+}
+
+.news {
+  width: 75%;
+  height: 200px;
+  margin: 80px auto;
+}
+.news__item {
+  border: 1px solid black;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.news__item a {
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.news__item a:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.news__item span {
+  padding: 0 10px 0 10px;
+  font-weight: normal;
+}
+
+.contact {
+  height: 300px;
+  background-color: #ebebeb;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 30px;
+  padding: 70px 0 20px 0;
+}
+.contact p {
+  margin: 0 20px;
+}
+
+footer {
+  height: 60px;
+  background-color: rgba(14, 13, 13, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+small {
+  padding-left: 150px;
+  font-size: 12px;
+}
+
+.footer__nav-list {
+  display: flex;
+}
+
+.footer__nav-item {
+  padding-right: 10px;
+  padding-left: 10px;
+  border-right: 2px solid white;
+  line-height: 1;
+}
+
+.footer__nav-item:last-child {
+  margin-right: 100px;
+  border: none;
+}
+
+.footer__nav-item a {
+  color: white;
+  font-size: 12px;
+}
+@media screen and (max-width: 768px) {
+  .header__nav {
+    display: none;
+  }
+  .drawer-menu {
+    display: block;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: -100%;
+    background-color: white;
+    transition: 0.7s;
+  }
+  .drawer-menu__list {
+    padding-top: 80px;
+    text-align: center;
+  }
+
+  .drawer-menu__item {
+    padding: 20px;
+  }
+
+  .drawer-menu__item a {
+    color: blue;
+  }
+
+  .drawer-menu__line {
+    display: inline-block;
+    width: 30px;
+    height: 28px;
+    cursor: pointer;
+    position: relative;
+    margin-right: 10px;
+  }
+
+  .drawer-menu__line--top,
+  .drawer-menu__line--middle,
+  .drawer-menu__line--bottom {
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    position: absolute;
+    transition: 0.5s;
+  }
+
+  .drawer-menu__line--top {
+    top: 0;
+  }
+
+  .drawer-menu__line--middle {
+    top: 12px;
+  }
+
+  .drawer-menu__line--bottom {
+    bottom: 0;
+  }
+
+  .drawer-menu__line.open span:nth-of-type(1) {
+    top: 12px;
+    transform: rotate(45deg);
+  }
+
+  .drawer-menu__line.open span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .drawer-menu__line.open span:nth-of-type(3) {
+    top: 12px;
+    transform: rotate(-45deg);
+  }
+
+  .in {
+    transform: translateX(100%);
+  }
+
+  .news {
+    width: 90%;
+  }
+
+  footer {
+    height: auto;
+  }
+
+  small {
+    padding-left: 100px;
+  }
+
+  .footer__nav-list {
+    display: inline-block;
+    margin: 20px 0 15px;
+  }
+
+  .footer__nav-item {
+    padding: 5px;
+    border: none;
+  }
+}
